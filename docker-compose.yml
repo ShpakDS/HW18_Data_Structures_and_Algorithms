@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: ./php
+    container_name: php_bst_counting_sort
+    volumes:
+      - ./php:/var/www/html
+    working_dir: /var/www/html
+    command: php -S 0.0.0.0:8000 -t .
+    ports:
+      - "8000:8000"
